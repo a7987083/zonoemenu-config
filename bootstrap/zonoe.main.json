@@ -1,1 +1,16 @@
-
+{
+  "ok": true,
+  "config_version": 1,
+  "api_endpoints": [
+    "https://api1.your-domain.com",
+    "https://api2.your-domain.com"
+  ],
+  "bootstrap_urls": [
+    "https://raw.githubusercontent.com/a7987083/zonoe-config/main/bootstrap/zonoe.main.json",
+    "https://bootstrap.your-domain.com/index/dylib_verify/config"
+  ],
+  "verify_path": "/index/dylib_verify/verify",
+  "expires_at": 1893456000,
+  "signature_alg": "hmac-sha256",
+  "signature": "这里填写计算出来的64位HMAC-SHA256"
+}
