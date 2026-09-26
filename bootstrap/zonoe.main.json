@@ -11,5 +11,5 @@
   "verify_path": "/index/dylib_verify/verify",
   "expires_at": 2147483647,
   "signature_alg": "hmac-sha256",
-  "signature": "23e36ffdad7e6a79ecd3a0f53b791f418f61a0405f60deb9f11a6d840c0f7001"
+  "signature": "4e15fdc9de1b7a8f8effdb6b5aa45596726885e4665fff5ad5a44bfbba895b94"
 }
