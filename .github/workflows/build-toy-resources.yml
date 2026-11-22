@@ -1,0 +1,42 @@
+name: Build Toy resources JSON
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'toy/entries/**'
+      - 'toy/categories.json'
+      - '.github/scripts/build-toy-resources.py'
+      - '.github/workflows/build-toy-resources.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: toy-resources-main
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+      - name: Build and validate resources
+        run: python3 .github/scripts/build-toy-resources.py
+      - name: Publish only when changed
+        run: |
+          if git diff --quiet -- toy/resources.json; then
+            echo "No catalog changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add toy/resources.json
+          git commit -m "chore(toy): sync resource catalog"
+          git pull --rebase origin main
+          git push origin HEAD:main

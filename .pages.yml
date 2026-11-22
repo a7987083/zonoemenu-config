@@ -1,80 +1,89 @@
-
 media: media
-
+settings:
+  merge: true
 content:
   - name: toy-resources
-    label: Toy 资源管理
-    type: file
-    path: toy/resources.json
+    label: Toy 游戏资源
+    type: collection
+    path: toy/entries
     format: json
+    filename:
+      template: "{fields.id}.json"
+      field: create
+    view:
+      primary: name
+      fields: [name, id, group, type]
+      search: [name, id, group, desc]
+      sort: [name, id]
+      default:
+        sort: name
+        order: asc
     fields:
-      - name: version
-        label: 数据版本
-        type: number
-      - name: categories
-        label: 资源分类
+      - name: id
+        label: 资源 ID（创建后不要修改，影响收藏）
+        type: string
+        required: true
+        options:
+          pattern:
+            regex: "^[A-Za-z0-9_-]+$"
+            message: "只能输入英文字母、数字、下划线和横线"
+      - name: name
+        label: 游戏名称
+        type: string
+        required: true
+      - name: group
+        label: 分类
+        type: select
+        required: true
+        options:
+          values:
+            - value: ios
+              label: iOS 游戏
+            - value: wow
+              label: 魔兽世界
+            - value: other
+              label: 其他
+      - name: desc
+        label: 介绍
+        type: text
+      - name: type
+        label: 资源类型
+        type: string
+      - name: icon
+        label: 图标
+        type: string
+      - name: tags
+        label: 标签
+        type: string
+        list: true
+      - name: url
+        label: 资源直达链接
+        type: string
+      - name: links
+        label: 网盘分享链接
         type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: "{name}"
         fields:
-          - name: id
+          - name: 百度网盘
+            label: 百度网盘
             type: string
-          - name: name
-            type: string
-          - name: caption
-            type: string
-          - name: icon
-            type: string
-      - name: resources
-        label: 游戏资源列表
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: "{name}"
-        fields:
-          - name: id
-            label: 资源 ID
-            type: string
-            required: true
-          - name: group
-            label: 所属分类
-            type: select
-            options:
-              values:
-                - value: ios
-                  label: iOS 游戏
-                - value: wow
-                  label: 魔兽世界
-                - value: other
-                  label: 其他
-          - name: name
-            label: 游戏名称
-            type: string
-            required: true
-          - name: desc
-            label: 资源介绍
-            type: text
-          - name: type
-            label: 资源类型
-            type: string
-          - name: icon
-            label: 图标
-            type: string
-          - name: tags
-            label: 标签
-            type: string
-            list: true
-          - name: url
-            label: 资源直达链接
-            type: string
-          - name: links
-            label: 网盘链接
-            type: object
-            fields:
-              - name: 百度网盘
-                label: 百度网盘地址
-                type: string
-  
+  - name: toy-categories
+    label: Toy 分类设置
+    type: file
+    path: toy/categories.json
+    format: json
+    list: true
+    fields:
+      - name: id
+        label: 分类 ID
+        type: string
+        required: true
+      - name: name
+        label: 分类名称
+        type: string
+        required: true
+      - name: caption
+        label: 分类说明
+        type: string
+      - name: icon
+        label: 分类图标
+        type: string

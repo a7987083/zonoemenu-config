@@ -1,0 +1,16 @@
+{
+  "id": "wow-ravencraft-cn",
+  "group": "wow",
+  "name": "乌鸦服 RavenCraft 启动器汉化",
+  "desc": "RavenCraft 启动器中文界面相关资源。请在发布前核对版本及资源授权。",
+  "type": "其他",
+  "icon": "🪶",
+  "tags": [
+    "RavenCraft",
+    "启动器",
+    "汉化"
+  ],
+  "links": {
+    "百度网盘": "https://www.bilibili.com/toy/wyeSyBiqXNp2Qwzm/index.html"
+  }
+}
