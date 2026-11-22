@@ -23,8 +23,8 @@
   "resources": [
     {
       "id": "wow-ravencraft-cn",
-      "group": "wow",
       "name": "乌鸦服 RavenCraft 启动器汉化",
+      "group": "wow",
       "desc": "RavenCraft 启动器中文界面相关资源。请在发布前核对版本及资源授权。",
       "type": "其他",
       "icon": "🪶",
@@ -35,12 +35,12 @@
       ],
       "linkItems": [
         {
-          "name": "百度网盘",
-          "url": "https://www.bilibili.com/toy/wyeSyBiqXNp2Qwzm/index.html"
+          "name": "夸克网盘",
+          "url": "https://pan.quark.cn/s/b6bb27fda341?pwd=dUR8"
         }
       ],
       "links": {
-        "百度网盘": "https://www.bilibili.com/toy/wyeSyBiqXNp2Qwzm/index.html"
+        "夸克网盘": "https://pan.quark.cn/s/b6bb27fda341?pwd=dUR8"
       }
     },
     {
