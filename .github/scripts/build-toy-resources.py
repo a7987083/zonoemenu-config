@@ -74,7 +74,7 @@ def build():
                     or not link["url"].startswith(("https://", "http://"))):
                     raise ValueError(f"{path}: invalid linkItems record")
                 name = link["name"].strip()
-                if name not in legacy:
+                if name not in legacy and len(legacy) < 20:
                     legacy[name] = link["url"].strip()
             item["links"] = legacy
         source[rid] = item
