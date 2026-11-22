@@ -120,7 +120,7 @@ def build():
         print(f"OK: {len(source)} entries, {len(categories)} categories")
         return 0
     for path, updated in entry_updates:
-        path.write_text(json.dumps(updated, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+        path.write_text(json.dumps(updated, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     if entry_updates:
         print(f"Backfilled {len(entry_updates)} editable entries")
     if OUT.read_text(encoding="utf-8") != encoded:
