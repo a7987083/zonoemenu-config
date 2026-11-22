@@ -1,5 +1,6 @@
 {
   "id": "wow-ravencraft-cn",
+  "autoId": "22a2adb1-3f83-4f3c-8859-ef6d8b0b5ac3",
   "name": "乌鸦服 RavenCraft 启动器汉化的",
   "group": "wow",
   "desc": "RavenCraft 启动器中文界面相关资源。请在发布前核对版本及资源授权。",
@@ -13,7 +14,7 @@
   "linkItems": [
     {
       "name": "夸克网盘",
-      "url": "https://pan.quark.cn/s/b6bb27fda341?pwd=dUR8"
+      "url": "https://pan.quark.cn/s/2e16a62f520b?pwd=c3k6"
     }
   ]
 }
