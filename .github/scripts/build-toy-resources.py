@@ -14,7 +14,7 @@ OUT = ROOT / "toy" / "resources.json"
 ENTRIES = ROOT / "toy" / "entries"
 CATEGORIES = ROOT / "toy" / "categories.json"
 REQUIRED = {"id", "name", "group"}
-ALLOWED = {"id", "name", "group", "desc", "type", "icon", "tags", "url", "links"}
+ALLOWED = {"id", "name", "group", "desc", "type", "icon", "tags", "url", "links", "linkItems"}
 
 
 def load(path):
@@ -57,6 +57,26 @@ def build():
             raise ValueError(f"{path}: invalid links")
         if "url" in item and not isinstance(item["url"], str):
             raise ValueError(f"{path}: invalid url")
+        # linkItems is the canonical editable list. Derive legacy links for old Toy.
+        # Multiple URLs with the same display name remain in linkItems; legacy
+        # Toy receives the first one for that name, rather than failing to load.
+        if "linkItems" in item:
+            links = item["linkItems"]
+            if not isinstance(links, list) or len(links) > 60:
+                raise ValueError(f"{path}: invalid linkItems")
+            legacy = {}
+            for link in links:
+                if (not isinstance(link, dict) or set(link) != {"name", "url"}
+                    or not isinstance(link["name"], str)
+                    or not link["name"].strip() or len(link["name"]) > 120
+                    or not isinstance(link["url"], str)
+                    or len(link["url"]) > 4096
+                    or not link["url"].startswith(("https://", "http://"))):
+                    raise ValueError(f"{path}: invalid linkItems record")
+                name = link["name"].strip()
+                if name not in legacy:
+                    legacy[name] = link["url"].strip()
+            item["links"] = legacy
         source[rid] = item
     ordered_ids = [r["id"] for r in existing if r["id"] in source]
     ordered_set = set(ordered_ids)

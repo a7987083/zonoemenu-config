@@ -59,29 +59,23 @@ content:
       - name: url
         label: 资源直达链接
         type: string
-      - name: links
-        label: 网盘分享链接（每种网盘可分别填写，留空表示不显示）
+      - name: linkItems
+        label: 下载链接（任意添加、删除、排序）
         type: object
-        description: 可同时配置多个网盘链接；保存后自动发布到 Toy
+        description: 每一项填写显示名称和完整地址，可重复使用相同名称
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{name}"
         fields:
-          - name: 百度网盘
-            label: 百度网盘
+          - name: name
+            label: 显示名称（如百度网盘、备用下载1）
             type: string
-          - name: 夸克网盘
-            label: 夸克网盘
+            required: true
+          - name: url
+            label: 下载链接（HTTPS）
             type: string
-          - name: 阿里云盘
-            label: 阿里云盘
-            type: string
-          - name: 123云盘
-            label: 123云盘
-            type: string
-          - name: 天翼云盘
-            label: 天翼云盘
-            type: string
-          - name: 蓝奏云
-            label: 蓝奏云
-            type: string
+            required: true
   - name: toy-categories
     label: Toy 分类设置
     type: file
