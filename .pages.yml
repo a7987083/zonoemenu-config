@@ -1,0 +1,80 @@
+
+media: media
+
+content:
+  - name: toy-resources
+    label: Toy 资源管理
+    type: file
+    path: toy/resources.json
+    format: json
+    fields:
+      - name: version
+        label: 数据版本
+        type: number
+      - name: categories
+        label: 资源分类
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{name}"
+        fields:
+          - name: id
+            type: string
+          - name: name
+            type: string
+          - name: caption
+            type: string
+          - name: icon
+            type: string
+      - name: resources
+        label: 游戏资源列表
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{name}"
+        fields:
+          - name: id
+            label: 资源 ID
+            type: string
+            required: true
+          - name: group
+            label: 所属分类
+            type: select
+            options:
+              values:
+                - value: ios
+                  label: iOS 游戏
+                - value: wow
+                  label: 魔兽世界
+                - value: other
+                  label: 其他
+          - name: name
+            label: 游戏名称
+            type: string
+            required: true
+          - name: desc
+            label: 资源介绍
+            type: text
+          - name: type
+            label: 资源类型
+            type: string
+          - name: icon
+            label: 图标
+            type: string
+          - name: tags
+            label: 标签
+            type: string
+            list: true
+          - name: url
+            label: 资源直达链接
+            type: string
+          - name: links
+            label: 网盘链接
+            type: object
+            fields:
+              - name: 百度网盘
+                label: 百度网盘地址
+                type: string
+  
