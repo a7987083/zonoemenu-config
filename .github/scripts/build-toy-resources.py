@@ -35,11 +35,13 @@ def build():
     if not isinstance(existing, list):
         raise ValueError("resources must be an array")
     source = {}
+    entry_updates = []
     paths = sorted(ENTRIES.glob("*.json"))
     if not paths:
         raise ValueError("No entries found: refusing to replace the catalog")
     for path in paths:
-        item = load(path)
+        original = load(path)
+        item = dict(original) if isinstance(original, dict) else original
         if not isinstance(item, dict) or not REQUIRED.issubset(item):
             raise ValueError(f"{path}: missing required fields")
         rid = item.get("id") or path.stem
@@ -89,6 +91,14 @@ def build():
                 if name not in legacy and len(legacy) < 20:
                     legacy[name] = link["url"].strip()
             item["links"] = legacy
+        # Persist only the auto-filled metadata into the editable source.
+        # Do not persist derived legacy links; the editor keeps linkItems as
+        # the single source of truth for new resources.
+        if any(original.get(k) != item[k] for k in ("id", "type", "icon")):
+            updated = dict(original)
+            for k in ("id", "type", "icon"):
+                updated[k] = item[k]
+            entry_updates.append((path, updated))
         source[rid] = item
     ordered_ids = [r["id"] for r in existing if r["id"] in source]
     ordered_set = set(ordered_ids)
@@ -100,12 +110,19 @@ def build():
         raise ValueError("Refusing to publish an empty catalog")
     encoded = json.dumps(merged, ensure_ascii=False, indent=2) + "\n"
     if "--check" in sys.argv:
+        if entry_updates:
+            print(f"Entries require metadata backfill: {len(entry_updates)}")
+            return 1
         live = load(OUT)
         if live.get("resources") != merged["resources"] or live.get("categories") != categories:
             print("Generated catalog differs from published JSON")
             return 1
         print(f"OK: {len(source)} entries, {len(categories)} categories")
         return 0
+    for path, updated in entry_updates:
+        path.write_text(json.dumps(updated, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+    if entry_updates:
+        print(f"Backfilled {len(entry_updates)} editable entries")
     if OUT.read_text(encoding="utf-8") != encoded:
         OUT.write_text(encoded, encoding="utf-8")
         print(f"Updated {OUT} ({len(source)} entries)")

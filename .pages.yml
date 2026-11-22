@@ -12,7 +12,7 @@ content:
       field: false
     view:
       primary: name
-      fields: [name, id, group, type]
+      fields: [name, group]
       search: [name, id, group, desc]
       sort: [name, id]
       default:
