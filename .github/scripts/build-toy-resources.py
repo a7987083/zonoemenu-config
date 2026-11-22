@@ -65,7 +65,11 @@ def build():
             item["type"] = CATEGORY_TYPES.get(item["group"], "其他")
         if not item.get("icon"):
             item["icon"] = category_by_id[item["group"]].get("icon") or "📂"
-        if "tags" in item and (not isinstance(item["tags"], list) or any(not isinstance(x,str) for x in item["tags"])):
+        # Optional tags are normalized so already published Toy clients can
+        # validate every new entry without a frontend update.
+        if "tags" not in item or item["tags"] is None:
+            item["tags"] = []
+        if not isinstance(item["tags"], list) or any(not isinstance(x,str) for x in item["tags"]):
             raise ValueError(f"{path}: invalid tags")
         if "links" in item and (not isinstance(item["links"], dict) or any(not isinstance(v,str) for v in item["links"].values())):
             raise ValueError(f"{path}: invalid links")
@@ -94,7 +98,7 @@ def build():
         # Persist only the auto-filled metadata into the editable source.
         # Do not persist derived legacy links; the editor keeps linkItems as
         # the single source of truth for new resources.
-        if any(original.get(k) != item[k] for k in ("id", "type", "icon")):
+        if any(original.get(k) != item[k] for k in ("id", "type", "icon", "tags")):
             updated = dict(original)
             for k in ("id", "type", "icon"):
                 updated[k] = item[k]
