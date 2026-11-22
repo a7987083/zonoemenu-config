@@ -60,11 +60,27 @@ content:
         label: 资源直达链接
         type: string
       - name: links
-        label: 网盘分享链接
+        label: 网盘分享链接（每种网盘可分别填写，留空表示不显示）
         type: object
+        description: 可同时配置多个网盘链接；保存后自动发布到 Toy
         fields:
           - name: 百度网盘
             label: 百度网盘
+            type: string
+          - name: 夸克网盘
+            label: 夸克网盘
+            type: string
+          - name: 阿里云盘
+            label: 阿里云盘
+            type: string
+          - name: 123云盘
+            label: 123云盘
+            type: string
+          - name: 天翼云盘
+            label: 天翼云盘
+            type: string
+          - name: 蓝奏云
+            label: 蓝奏云
             type: string
   - name: toy-categories
     label: Toy 分类设置
