@@ -13,8 +13,9 @@ ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "toy" / "resources.json"
 ENTRIES = ROOT / "toy" / "entries"
 CATEGORIES = ROOT / "toy" / "categories.json"
-REQUIRED = {"id", "name", "group"}
-ALLOWED = {"id", "name", "group", "desc", "type", "icon", "tags", "url", "links", "linkItems"}
+REQUIRED = {"name", "group"}
+CATEGORY_TYPES = {"wow": "魔兽资源", "ios": "游戏", "other": "其他"}
+ALLOWED = {"id", "autoId", "name", "group", "desc", "type", "icon", "tags", "url", "links", "linkItems"}
 
 
 def load(path):
@@ -27,6 +28,7 @@ def build():
     if not isinstance(categories, list) or not categories:
         raise ValueError("Categories cannot be empty")
     group_ids = {c["id"] for c in categories}
+    category_by_id = {c["id"]: c for c in categories}
     if len(group_ids) != len(categories):
         raise ValueError("Duplicate category IDs")
     existing = old.get("resources", [])
@@ -40,9 +42,13 @@ def build():
         item = load(path)
         if not isinstance(item, dict) or not REQUIRED.issubset(item):
             raise ValueError(f"{path}: missing required fields")
-        rid = item["id"]
+        rid = item.get("id") or path.stem
         if not isinstance(rid, str) or not rid or rid != path.stem:
             raise ValueError(f"{path}: ID must match filename")
+        # autoId only helps Pages CMS name newly created files; it is not
+        # part of the published resource schema.
+        item.pop("autoId", None)
+        item["id"] = rid
         if rid in source:
             raise ValueError(f"Duplicate ID: {rid}")
         if not isinstance(item["name"], str) or not item["name"].strip():
@@ -51,6 +57,12 @@ def build():
             raise ValueError(f"{path}: invalid group {item['group']}")
         if not set(item).issubset(ALLOWED):
             raise ValueError(f"{path}: unrecognized keys {set(item)-ALLOWED}")
+        # Backfill only missing values; preserve existing custom type/icon.
+        # Category icons come from the same categories.json used by Toy.
+        if not item.get("type"):
+            item["type"] = CATEGORY_TYPES.get(item["group"], "其他")
+        if not item.get("icon"):
+            item["icon"] = category_by_id[item["group"]].get("icon") or "📂"
         if "tags" in item and (not isinstance(item["tags"], list) or any(not isinstance(x,str) for x in item["tags"])):
             raise ValueError(f"{path}: invalid tags")
         if "links" in item and (not isinstance(item["links"], dict) or any(not isinstance(v,str) for v in item["links"].values())):

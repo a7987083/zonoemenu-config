@@ -8,8 +8,8 @@ content:
     path: toy/entries
     format: json
     filename:
-      template: "{fields.id}.json"
-      field: create
+      template: "{fields.autoId}.json"
+      field: false
     view:
       primary: name
       fields: [name, id, group, type]
@@ -20,13 +20,17 @@ content:
         order: asc
     fields:
       - name: id
-        label: 资源 ID（创建后不要修改，影响收藏）
+        label: 资源 ID（自动维护）
         type: string
-        required: true
+        hidden: true
+        readonly: true
+      - name: autoId
+        label: 新建资源自动编号
+        type: uuid
+        hidden: true
         options:
-          pattern:
-            regex: "^[A-Za-z0-9_-]+$"
-            message: "只能输入英文字母、数字、下划线和横线"
+          editable: false
+          generate: false
       - name: name
         label: 游戏名称
         type: string
@@ -47,11 +51,15 @@ content:
         label: 介绍
         type: text
       - name: type
-        label: 资源类型
+        label: 资源类型（按分类自动补齐）
         type: string
+        hidden: true
+        readonly: true
       - name: icon
-        label: 图标
+        label: 图标（按分类自动补齐）
         type: string
+        hidden: true
+        readonly: true
       - name: tags
         label: 标签
         type: string
