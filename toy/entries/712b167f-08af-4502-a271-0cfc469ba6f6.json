@@ -1,0 +1,12 @@
+{
+  "autoId": "712b167f-08af-4502-a271-0cfc469ba6f6",
+  "name": "走喝插件",
+  "group": "wow",
+  "desc": "需要搭配taiyangshendian.dll",
+  "linkItems": [
+    {
+      "name": "夸克网盘",
+      "url": "https://pan.quark.cn/s/80da6bfe0a8b?pwd=xRXD"
+    }
+  ]
+}
