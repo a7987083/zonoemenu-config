@@ -33,6 +33,12 @@
         "启动器",
         "汉化"
       ],
+      "linkItems": [
+        {
+          "name": "百度网盘",
+          "url": "https://www.bilibili.com/toy/wyeSyBiqXNp2Qwzm/index.html"
+        }
+      ],
       "links": {
         "百度网盘": "https://www.bilibili.com/toy/wyeSyBiqXNp2Qwzm/index.html"
       }
