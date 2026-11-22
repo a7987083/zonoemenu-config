@@ -10035,6 +10035,23 @@
       "links": {
         "夸克网盘": "https://pan.quark.cn/s/bb09525c6d59?pwd=NGMC"
       }
+    },
+    {
+      "name": "尸ti旗帜插件",
+      "group": "wow",
+      "desc": "需要搭配taiyangshendian.dll",
+      "linkItems": [
+        {
+          "name": "夸克网盘",
+          "url": "https://pan.quark.cn/s/b893611de16b?pwd=w9T5"
+        }
+      ],
+      "id": "98740679-19e5-41e8-b3ba-5637d74666f6",
+      "type": "魔兽资源",
+      "icon": "🐢",
+      "links": {
+        "夸克网盘": "https://pan.quark.cn/s/b893611de16b?pwd=w9T5"
+      }
     }
   ]
 }
