@@ -100,7 +100,7 @@ def build():
         # the single source of truth for new resources.
         if any(original.get(k) != item[k] for k in ("id", "type", "icon", "tags")):
             updated = dict(original)
-            for k in ("id", "type", "icon"):
+            for k in ("id", "type", "icon", "tags"):
                 updated[k] = item[k]
             entry_updates.append((path, updated))
         source[rid] = item
