@@ -204,6 +204,24 @@
       "links": {
         "夸克网盘": "https://pan.quark.cn/s/231884f3aadc?pwd=n9J9"
       }
+    },
+    {
+      "name": "短剧之家",
+      "group": "ios",
+      "desc": "真人短剧、漫剧、AI 短剧，一处看全。\n没有广告，只有下一集",
+      "linkItems": [
+        {
+          "name": "夸克网盘",
+          "url": "https://pan.quark.cn/s/231884f3aadc?pwd=n9J9"
+        }
+      ],
+      "id": "969b0011-5a6d-486d-a4d9-14d4d4f61c98",
+      "type": "游戏",
+      "icon": "🎮",
+      "tags": [],
+      "links": {
+        "夸克网盘": "https://pan.quark.cn/s/231884f3aadc?pwd=n9J9"
+      }
     }
   ]
 }
