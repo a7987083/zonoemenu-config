@@ -1,0 +1,12 @@
+{
+  "autoId": "c2485c96-d341-4824-a07d-73a8cf80cf65",
+  "name": "两仪 iOS上的安卓",
+  "group": "ios",
+  "desc": "不越狱、不用 JIT，\n3 秒打开 Android 13\n\niOS 不允许 App 在运行时生成可执行代码，这是 iPhone 上跑 Android 最大的障碍。两仪在构建时就把 Android 的代码翻译成 iPhone 的本机代码，把芯片的性能发挥到极致。\n下载 IPA\niOS / iPadOS 15 及以上。下载 IPA 后用 AltStore、SideStore、TrollStore 或自己的证书签名安装。\n",
+  "linkItems": [
+    {
+      "name": "夸克网盘",
+      "url": "https://pan.quark.cn/s/7e87d76cd305?pwd=BkBA"
+    }
+  ]
+}
