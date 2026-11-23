@@ -8,6 +8,12 @@
       "icon": "🐢"
     },
     {
+      "id": "ios",
+      "name": "iOS软件|苹果软件",
+      "caption": "游戏资讯 · 工具与资料",
+      "icon": "🎮"
+    },
+    {
       "id": "other",
       "name": "其他",
       "caption": "教程 · 软件 · 设计资源",
@@ -125,6 +131,24 @@
       "tags": [],
       "links": {
         "夸克网盘": "https://pan.quark.cn/s/5e3b35a6bae8?pwd=5TEb"
+      }
+    },
+    {
+      "name": "iPadn 砸壳/降级应用",
+      "group": "ios",
+      "desc": "最低系统要求ios 16\n支持下载AppStore 旧版本应用\n支持|免越狱|免巨魔|免电脑 静态解密应用",
+      "linkItems": [
+        {
+          "name": "夸克网盘",
+          "url": "https://pan.quark.cn/s/0533baef6380?pwd=L7Ku"
+        }
+      ],
+      "id": "61ce42fe-4ef6-4cd5-be80-9d197794af6d",
+      "type": "游戏",
+      "icon": "🎮",
+      "tags": [],
+      "links": {
+        "夸克网盘": "https://pan.quark.cn/s/0533baef6380?pwd=L7Ku"
       }
     }
   ]
