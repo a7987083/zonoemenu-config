@@ -10074,6 +10074,24 @@
       "links": {
         "夸克网盘": "https://pan.quark.cn/s/80da6bfe0a8b?pwd=xRXD"
       }
+    },
+    {
+      "name": "乌龟服搭配dll",
+      "group": "wow",
+      "desc": "这个是taiyangshendian.dll\n可以给我的插件提供api能力",
+      "linkItems": [
+        {
+          "name": "夸克网盘",
+          "url": "https://pan.quark.cn/s/5e3b35a6bae8?pwd=5TEb"
+        }
+      ],
+      "id": "5c8a6317-6726-496c-8bb9-d6f22e638651",
+      "type": "魔兽资源",
+      "icon": "🐢",
+      "tags": [],
+      "links": {
+        "夸克网盘": "https://pan.quark.cn/s/5e3b35a6bae8?pwd=5TEb"
+      }
     }
   ]
 }
