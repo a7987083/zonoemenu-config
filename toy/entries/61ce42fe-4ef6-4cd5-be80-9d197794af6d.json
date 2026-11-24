@@ -6,7 +6,7 @@
   "desc": "最低系统要求ios 16\n支持下载AppStore 旧版本应用\n支持|免越狱|免巨魔|免电脑 静态解密应用",
   "type": "游戏",
   "icon": "🎮",
-  "cloudProviders": "夸克网盘、百度网盘 提取码bsqz",
+  "cloudProviders": "夸克网盘、百度网盘 提取码p73v",
   "linkItems": [
     {
       "name": "夸克网盘",
@@ -16,5 +16,6 @@
       "name": "百度网盘 提取码p73v",
       "url": "https://pan.baidu.com/s/1vqYtFhkSBlVoHJC9Hy7Iqg?pwd=p73v"
     }
-  ]
+  ],
+  "tags": []
 }
