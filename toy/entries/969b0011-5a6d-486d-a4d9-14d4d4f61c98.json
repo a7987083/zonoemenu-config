@@ -9,13 +9,12 @@
   "cloudProviders": "夸克网盘 提取码n9J9、百度网盘 提取码h2fj",
   "linkItems": [
     {
-      "name": "夸克网盘 提取码n9J9",
-      "url": "https://pan.quark.cn/s/231884f3aadc?pwd=n9J9"
+      "name": "夸克网盘",
+      "url": "https://pan.quark.cn/s/609eb5eaf09a?pwd=cTV1"
     },
     {
       "name": "百度网盘 提取码h2fj",
       "url": "https://pan.baidu.com/s/1x7Ws2k9I-J7MRizm7hfrIQ?pwd=h2fj"
     }
-  ],
-  "tags": []
+  ]
 }
