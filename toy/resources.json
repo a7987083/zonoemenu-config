@@ -206,21 +206,26 @@
       }
     },
     {
+      "id": "969b0011-5a6d-486d-a4d9-14d4d4f61c98",
       "name": "短剧之家",
       "group": "ios",
       "desc": "真人短剧、漫剧、AI 短剧，一处看全。\n没有广告，只有下一集",
+      "type": "游戏",
+      "icon": "🎮",
       "linkItems": [
         {
           "name": "夸克网盘",
           "url": "https://pan.quark.cn/s/231884f3aadc?pwd=n9J9"
+        },
+        {
+          "name": "百度网盘 提取码1j7s",
+          "url": "https://pan.baidu.com/s/1esVezfUgaQ0rlsU9MfKitw?pwd=1j7s"
         }
       ],
-      "id": "969b0011-5a6d-486d-a4d9-14d4d4f61c98",
-      "type": "游戏",
-      "icon": "🎮",
       "tags": [],
       "links": {
-        "夸克网盘": "https://pan.quark.cn/s/231884f3aadc?pwd=n9J9"
+        "夸克网盘": "https://pan.quark.cn/s/231884f3aadc?pwd=n9J9",
+        "百度网盘 提取码1j7s": "https://pan.baidu.com/s/1esVezfUgaQ0rlsU9MfKitw?pwd=1j7s"
       }
     }
   ]
