@@ -12,5 +12,6 @@
   "id": "c2485c96-d341-4824-a07d-73a8cf80cf65",
   "type": "游戏",
   "icon": "🎮",
-  "tags": []
+  "tags": [],
+  "cloudProviders": "夸克网盘"
 }
