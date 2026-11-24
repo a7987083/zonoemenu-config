@@ -6,7 +6,7 @@
   "desc": "真人短剧、漫剧、AI 短剧，一处看全。\n没有广告，只有下一集",
   "type": "游戏",
   "icon": "🎮",
-  "cloudProviders": "夸克网盘 提取码n9J9、百度网盘 提取码h2fj",
+  "cloudProviders": "夸克网盘、百度网盘 提取码h2fj",
   "linkItems": [
     {
       "name": "夸克网盘",
@@ -16,5 +16,6 @@
       "name": "百度网盘 提取码h2fj",
       "url": "https://pan.baidu.com/s/1x7Ws2k9I-J7MRizm7hfrIQ?pwd=h2fj"
     }
-  ]
+  ],
+  "tags": []
 }
