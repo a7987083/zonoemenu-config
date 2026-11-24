@@ -6,7 +6,7 @@
   "desc": "需要搭配taiyangshendian.dll",
   "type": "魔兽资源",
   "icon": "🐢",
-  "cloudProviders": "夸克网盘",
+  "cloudProviders": "夸克网盘、百度网盘 提取码nysf",
   "linkItems": [
     {
       "name": "夸克网盘",
@@ -16,5 +16,6 @@
       "name": "百度网盘 提取码nysf",
       "url": "https://pan.baidu.com/s/14esnyRBpHYLMp_o-N9QdKA?pwd=nysf"
     }
-  ]
+  ],
+  "tags": []
 }
