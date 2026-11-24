@@ -1,17 +1,20 @@
 {
+  "id": "98740679-19e5-41e8-b3ba-5637d74666f6",
   "autoId": "98740679-19e5-41e8-b3ba-5637d74666f6",
   "name": "尸ti旗帜插件",
   "group": "wow",
   "desc": "需要搭配taiyangshendian.dll",
+  "type": "魔兽资源",
+  "icon": "🐢",
+  "cloudProviders": "夸克网盘",
   "linkItems": [
     {
       "name": "夸克网盘",
       "url": "https://pan.quark.cn/s/b893611de16b?pwd=w9T5"
+    },
+    {
+      "name": "百度网盘 提取码nysf",
+      "url": "https://pan.baidu.com/s/14esnyRBpHYLMp_o-N9QdKA?pwd=nysf"
     }
-  ],
-  "id": "98740679-19e5-41e8-b3ba-5637d74666f6",
-  "type": "魔兽资源",
-  "icon": "🐢",
-  "tags": [],
-  "cloudProviders": "夸克网盘"
+  ]
 }
