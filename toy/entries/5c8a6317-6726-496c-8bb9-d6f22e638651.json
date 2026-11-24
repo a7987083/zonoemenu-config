@@ -6,7 +6,7 @@
   "desc": "这个是taiyangshendian.dll\n可以给我的插件提供api能力",
   "type": "魔兽资源",
   "icon": "🐢",
-  "cloudProviders": "夸克网盘、百度网盘 提取码6uj8",
+  "cloudProviders": "夸克网盘、百度网盘 提取码q32r",
   "linkItems": [
     {
       "name": "夸克网盘",
@@ -16,5 +16,6 @@
       "name": "百度网盘 提取码q32r",
       "url": "https://pan.baidu.com/s/13FctBaSpQBPcm6NFzTmEhA?pwd=q32r"
     }
-  ]
+  ],
+  "tags": []
 }
