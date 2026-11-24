@@ -267,6 +267,29 @@
         "夸克网盘": "https://pan.quark.cn/s/491af1d70ff2?pwd=EPd6",
         "百度网盘 提取码h2fj": "https://pan.baidu.com/s/1x7Ws2k9I-J7MRizm7hfrIQ?pwd=h2fj"
       }
+    },
+    {
+      "name": "igamegod 修改器",
+      "group": "ios",
+      "desc": "内存修改器：通过搜索与修改内存数值（如分数、金币、宝石等），类似 PC 端的 Cheat Engine 或 Android 端的 GG 修改器、八门神器。",
+      "linkItems": [
+        {
+          "name": "夸克网盘",
+          "url": "https://pan.quark.cn/s/c45027d5a60a?pwd=mdjR"
+        },
+        {
+          "name": "百度网盘 提取码",
+          "url": "https://pan.baidu.com/s/1_j83c9Hh_R4kwSAROAsfyw?pwd=w5q2"
+        }
+      ],
+      "id": "540a5f45-86b6-4874-8fb1-063c00918107",
+      "type": "游戏",
+      "icon": "🎮",
+      "tags": [],
+      "links": {
+        "夸克网盘": "https://pan.quark.cn/s/c45027d5a60a?pwd=mdjR",
+        "百度网盘 提取码": "https://pan.baidu.com/s/1_j83c9Hh_R4kwSAROAsfyw?pwd=w5q2"
+      }
     }
   ]
 }
