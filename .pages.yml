@@ -12,7 +12,7 @@ content:
       field: false
     view:
       primary: name
-      fields: [name, id, group, type]
+      fields: [name, id, group, type, cloudProviders]
       search: [name, id, group, desc]
       sort: [name, id]
       default:
@@ -67,6 +67,11 @@ content:
       - name: url
         label: 资源直达链接
         type: string
+      - name: cloudProviders
+        label: 已添加网盘
+        type: string
+        hidden: true
+        readonly: true
       - name: linkItems
         label: 下载链接（任意添加、删除、排序）
         type: object

@@ -15,7 +15,7 @@ ENTRIES = ROOT / "toy" / "entries"
 CATEGORIES = ROOT / "toy" / "categories.json"
 REQUIRED = {"name", "group"}
 CATEGORY_TYPES = {"wow": "魔兽资源", "ios": "游戏", "other": "其他"}
-ALLOWED = {"id", "autoId", "name", "group", "desc", "type", "icon", "tags", "url", "links", "linkItems"}
+ALLOWED = {"id", "autoId", "name", "group", "desc", "type", "icon", "tags", "url", "links", "linkItems", "cloudProviders"}
 
 
 def load(path):
@@ -95,14 +95,18 @@ def build():
                 if name not in legacy and len(legacy) < 20:
                     legacy[name] = link["url"].strip()
             item["links"] = legacy
+        # CMS-only summary; keep the published Toy schema unchanged.
+        names = (link["name"].strip() for link in item["linkItems"]) if "linkItems" in item else item.get("links", {}).keys()
+        item["cloudProviders"] = "、".join(dict.fromkeys(name for name in names if name)) or "暂无"
         # Persist only the auto-filled metadata into the editable source.
         # Do not persist derived legacy links; the editor keeps linkItems as
         # the single source of truth for new resources.
-        if any(original.get(k) != item[k] for k in ("id", "type", "icon", "tags")):
+        if any(original.get(k) != item[k] for k in ("id", "type", "icon", "tags", "cloudProviders")):
             updated = dict(original)
-            for k in ("id", "type", "icon", "tags"):
+            for k in ("id", "type", "icon", "tags", "cloudProviders"):
                 updated[k] = item[k]
             entry_updates.append((path, updated))
+        item.pop("cloudProviders", None)
         source[rid] = item
     ordered_ids = [r["id"] for r in existing if r["id"] in source]
     ordered_set = set(ordered_ids)
