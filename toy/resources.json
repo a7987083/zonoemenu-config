@@ -118,21 +118,26 @@
       }
     },
     {
+      "id": "712b167f-08af-4502-a271-0cfc469ba6f6",
       "name": "走喝插件",
       "group": "wow",
       "desc": "需要搭配taiyangshendian.dll",
+      "type": "魔兽资源",
+      "icon": "🐢",
       "linkItems": [
         {
           "name": "夸克网盘",
           "url": "https://pan.quark.cn/s/80da6bfe0a8b?pwd=xRXD"
+        },
+        {
+          "name": "百度网盘 提取码c482",
+          "url": "https://pan.baidu.com/s/1gQox0Lk7sU7HOlM_HOrFKg?pwd=c482"
         }
       ],
-      "id": "712b167f-08af-4502-a271-0cfc469ba6f6",
-      "type": "魔兽资源",
-      "icon": "🐢",
       "tags": [],
       "links": {
-        "夸克网盘": "https://pan.quark.cn/s/80da6bfe0a8b?pwd=xRXD"
+        "夸克网盘": "https://pan.quark.cn/s/80da6bfe0a8b?pwd=xRXD",
+        "百度网盘 提取码c482": "https://pan.baidu.com/s/1gQox0Lk7sU7HOlM_HOrFKg?pwd=c482"
       }
     },
     {
