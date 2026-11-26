@@ -8,5 +8,10 @@
       "name": "夸克网盘",
       "url": "https://pan.quark.cn/s/73c443e785a8?pwd=RiRf"
     }
-  ]
+  ],
+  "id": "61a418ba-3628-4708-98d1-103a5bf96265",
+  "type": "其他",
+  "icon": "📂",
+  "tags": [],
+  "cloudProviders": "夸克网盘"
 }
