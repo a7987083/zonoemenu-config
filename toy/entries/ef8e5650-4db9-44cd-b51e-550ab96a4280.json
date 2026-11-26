@@ -1,0 +1,12 @@
+{
+  "autoId": "ef8e5650-4db9-44cd-b51e-550ab96a4280",
+  "name": "TWThreat仇恨插件",
+  "group": "wow",
+  "desc": "⚔️ 多目标仇恨监控\n🔄 RaidSync 团队仇恨同步\n👀 死亡后仍可接收共享数据\n🚨 群怪锁定及坦克转移预警\n🎨 中文设置与四方向布局\n需要搭配taiyangshendian.dll 才可以显示多目标",
+  "linkItems": [
+    {
+      "name": "夸克网盘",
+      "url": "https://pan.quark.cn/s/9628a56374ef?pwd=RJ7c"
+    }
+  ]
+}
