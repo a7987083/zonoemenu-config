@@ -326,6 +326,24 @@
       "links": {
         "夸克网盘": "https://pan.quark.cn/s/73c443e785a8?pwd=RiRf"
       }
+    },
+    {
+      "name": "hyperframes",
+      "group": "other",
+      "desc": "新一代AI视频制作神器 HyperFrames！不用剪映，用AI和HTML就能制作高级动态视频！",
+      "linkItems": [
+        {
+          "name": "夸克网盘",
+          "url": "https://pan.quark.cn/s/e4be1b06ea53?pwd=t3W3"
+        }
+      ],
+      "id": "dacab04f-77b2-4ece-bbaa-6ebe5c901f0e",
+      "type": "其他",
+      "icon": "📂",
+      "tags": [],
+      "links": {
+        "夸克网盘": "https://pan.quark.cn/s/e4be1b06ea53?pwd=t3W3"
+      }
     }
   ]
 }
