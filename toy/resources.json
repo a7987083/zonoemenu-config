@@ -362,6 +362,24 @@
       "links": {
         "夸克网盘": "https://pan.quark.cn/s/9628a56374ef?pwd=RJ7c"
       }
+    },
+    {
+      "name": "当前目标圈",
+      "group": "wow",
+      "desc": "前敌对目标警戒圈估算；原版选择圈投影；可选 FuBar 入口。",
+      "linkItems": [
+        {
+          "name": "夸克网盘",
+          "url": "https://pan.quark.cn/s/ab99602dd9d1?pwd=uTDC"
+        }
+      ],
+      "id": "ac3cecf7-ba7d-4822-b692-f350b24074f7",
+      "type": "魔兽资源",
+      "icon": "🐢",
+      "tags": [],
+      "links": {
+        "夸克网盘": "https://pan.quark.cn/s/ab99602dd9d1?pwd=uTDC"
+      }
     }
   ]
 }
