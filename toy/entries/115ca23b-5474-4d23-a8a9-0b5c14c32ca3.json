@@ -8,5 +8,10 @@
       "name": "夸克网盘",
       "url": "https://pan.quark.cn/s/ee1a2f47439a?pwd=3vDR"
     }
-  ]
+  ],
+  "id": "115ca23b-5474-4d23-a8a9-0b5c14c32ca3",
+  "type": "游戏",
+  "icon": "🎮",
+  "tags": [],
+  "cloudProviders": "夸克网盘"
 }
