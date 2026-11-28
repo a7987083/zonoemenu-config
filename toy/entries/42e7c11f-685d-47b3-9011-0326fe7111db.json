@@ -3,9 +3,10 @@
   "autoId": "42e7c11f-685d-47b3-9011-0326fe7111db",
   "name": "乌龟服登陆器原版",
   "group": "wow",
-  "desc": "这个可以给水豚服使用。",
+  "desc": "这个可以给水豚服使用的",
   "type": "魔兽资源",
   "icon": "🐢",
+  "cloudProviders": "夸克网盘、百度网盘 提取码gjr8",
   "linkItems": [
     {
       "name": "夸克网盘",
@@ -15,7 +16,5 @@
       "name": "百度网盘 提取码gjr8",
       "url": "https://pan.baidu.com/s/1au0_UgJSaU--EcS3HYyDaQ?pwd=gjr8"
     }
-  ],
-  "tags": [],
-  "cloudProviders": "夸克网盘、百度网盘 提取码gjr8"
+  ]
 }
