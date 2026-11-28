@@ -1,17 +1,20 @@
 {
+  "id": "115ca23b-5474-4d23-a8a9-0b5c14c32ca3",
   "autoId": "115ca23b-5474-4d23-a8a9-0b5c14c32ca3",
   "name": "Eternal Empire永恒帝国",
   "group": "ios",
   "desc": "Eternal Empire永恒帝国最新版具有独特魅力的策略类游戏。在这个充满奇幻与挑战的游戏世界里，玩家将置身于一个宏大的帝国之中，扮演统治者的角色！",
-  "linkItems": [
-    {
-      "name": "夸克网盘",
-      "url": "https://pan.quark.cn/s/ee1a2f47439a?pwd=3vDR"
-    }
-  ],
-  "id": "115ca23b-5474-4d23-a8a9-0b5c14c32ca3",
   "type": "游戏",
   "icon": "🎮",
-  "tags": [],
-  "cloudProviders": "夸克网盘"
+  "cloudProviders": "夸克网盘",
+  "linkItems": [
+    {
+      "name": "夸克网盘igamegod版",
+      "url": "https://pan.quark.cn/s/ee1a2f47439a?pwd=3vDR"
+    },
+    {
+      "name": "夸克网盘破解内购版",
+      "url": "https://pan.quark.cn/s/5a273c07e5ba?pwd=64kA"
+    }
+  ]
 }
